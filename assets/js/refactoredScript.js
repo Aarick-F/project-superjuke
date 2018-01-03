@@ -1,5 +1,3 @@
-// THIS IS REFACTOR 1, MANY MORE TO COME
-
 function Player(r, l, s, p, sp) {
     this.radius = r;
     this.length = l;
