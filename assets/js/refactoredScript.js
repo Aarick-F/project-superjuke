@@ -8,19 +8,19 @@ function Player(r, l, s, p, sp) {
 
     if(this.player === 1) {
     	this.path = new Path({
-    		strokeColor: "rgba(0, 255, 255, 1)",
-    		fillColor: "rgba(0, 255, 255, 0.1)",
+    		strokeColor: "rgba(96, 255, 181, 1)",
+    		fillColor: "rgba(96, 255, 181, 0.1)",
     		strokeWidth: 5,
-    		shadowColor: "#FFF",
+    		shadowColor: "rgba(255, 255, 255, 1)",
     		shadowBlur: 30,
     		shadowOffset: new Point(0, 0),
     		closed: true
     	});
     } else if(this.player === 2) {
     	this.path = new Path({
-    		strokeColor: "#F22",
+    		strokeColor: "rgba(255, 158, 246, 1)",
     		strokeWidth: 3,
-    		shadowColor: "#F22",
+    		shadowColor: "rgb(255, 158, 246)",
     		shadowBlur: 20,
     		shadowOffset: new Point(0, 0),
     		closed: true
@@ -35,6 +35,8 @@ function Player(r, l, s, p, sp) {
     }
 
 }
+
+// MOVEMENT FUNCTIONS
 
 Player.prototype = {
 	player1Move: function() {
@@ -60,22 +62,22 @@ Player.prototype = {
 		}
 	},
 	player2Move: function() {
-		if(Key.isDown('up') && this.player === 2) {
+		if(Key.isDown('i') && this.player === 2) {
 			for(var i = 0; i < this.path.segments.length; i++) {
 				this.path.segments[i].point.y -= this.speed;
 			}
 		}
-		if(Key.isDown('down') && this.player === 2) {
+		if(Key.isDown('k') && this.player === 2) {
 			for(var i = 0; i < this.path.segments.length; i++) {
 				this.path.segments[i].point.y += this.speed;
 			}
 		}
-		if(Key.isDown('left') && this.player === 2) {
+		if(Key.isDown('j') && this.player === 2) {
 			for(var i = 0; i < this.path.segments.length; i++) {
 				this.path.segments[i].point.x -= this.speed;
 			}
 		}
-		if(Key.isDown('right') && this.player === 2) {
+		if(Key.isDown('l') && this.player === 2) {
 			for(var i = 0; i < this.path.segments.length; i++) {
 				this.path.segments[i].point.x += this.speed;
 			}
