@@ -8,8 +8,8 @@ function Player(r, l, s, p, sp) {
 
     if(this.player === 1) {
     	this.path = new Path({
-    		strokeColor: "rgba(96, 255, 181, 1)",
-    		fillColor: "rgba(96, 255, 181, 0.1)",
+    		strokeColor: "rgba(255, 0, 0, 0.5)",
+    		fillColor: "rgba(255, 0, 0, 0.1)",
     		strokeWidth: 5,
     		shadowColor: "rgba(255, 255, 255, 1)",
     		shadowBlur: 30,
@@ -18,9 +18,9 @@ function Player(r, l, s, p, sp) {
     	});
     } else if(this.player === 2) {
     	this.path = new Path({
-    		strokeColor: "rgba(255, 158, 246, 1)",
+    		strokeColor: "rgba(0, 255, 255, 1)",
     		strokeWidth: 3,
-    		shadowColor: "rgb(255, 158, 246)",
+    		shadowColor: "rgb(0, 255, 255)",
     		shadowBlur: 20,
     		shadowOffset: new Point(0, 0),
     		closed: true
@@ -89,7 +89,7 @@ Player.prototype = {
 //----------MAIN----------
 
 var player1 = new Player(80, 80, 2, 1, view.center);
-var player2 = new Player(20, 20, 3, 2, view.center);
+var player2 = new Player(15, 15, 3, 2, view.center);
 player1.path.smooth();
 player2.path.smooth();
 
