@@ -42,11 +42,11 @@ function Player(type) {
 	}
 
 	for(var i = 0; i < this.numSegments; i++) {
-    	    this.path.add(this.spawn + new Point({
-    		    angle: 360 / this.numSegments * i,
-    		    length: this.length
-    	    }));
-        }
+    	this.path.add(this.spawn + new Point({
+    		angle: 360 / this.numSegments * i,
+    		length: this.length
+    	}));
+    }
 }
 
 Player.prototype = {
@@ -129,3 +129,7 @@ function onFrame() {
         }
 	}
 }
+
+console.log(PaperScope.get(0));
+console.log(PaperScope.get(1));
+console.log(PaperScope.get(2));
