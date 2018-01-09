@@ -120,8 +120,24 @@ window.onload = function() {
     player1.path.translate(view.center);
     player2.path.translate(view.center);
 
+     var naked = false;
 
-    var naked = false;
+    // TOOL USED TO SHOW PATHS OF PLAYERS
+    var tool = new Tool();
+    tool.onMouseDown = function() {
+        if(naked === false) {
+        	naked = true;
+        	player1.path.selected = true;
+        	player2.path.selected = true;
+        } else if(naked === true) {
+        	naked = false;
+        	player1.path.selected = false;
+        	player2.path.selected = false;
+        }
+    }
+
+
+   
 
     view.onFrame = function() {
 
