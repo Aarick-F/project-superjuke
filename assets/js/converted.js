@@ -18,11 +18,11 @@ window.onload = function() {
 
 		    // DRAWING THE SHAPE
             this.path = new Path({
-        	    strokeColor: "rgba(255, 0, 0, 0.5)",
-    		    fillColor: "rgba(255, 0, 0, 0.1)",
+        	    strokeColor: "rgba(255, 255, 255, 1)",
+    		    // fillColor: "rgba(255, 0, 0, 0.1)",
     		    strokeWidth: 5,
-    		    shadowColor: "rgba(255, 255, 255, 1)",
-    		    shadowBlur: 30,
+    		    shadowColor: "rgba(255, 0, 255, 1)",
+    		    shadowBlur: 25,
     		    shadowOffset: new Point(0, 0),
     		    closed: true,
     		    // selected: true
@@ -113,22 +113,22 @@ window.onload = function() {
     //----------MAIN----------
     var player1 = new Player("dom");
     var player2 = new Player("sub");
-
     player1.path.smooth();
     player2.path.smooth();
+
+    // CENTERS PLAYERS
+    player1.path.translate(view.center);
+    player2.path.translate(view.center);
 
 
     var naked = false;
 
     view.onFrame = function() {
 
-	    // CREATES PLAYERS AND LISTENS FOR KEY EVENTS
+	    // LISTENS FOR KEY EVENTS & UPDATES POSITION
 	    player1.playerMove();
 	    player2.playerMove();
+	    
     }
-
-    view.draw();
-    console.log(player1.path.segments[0]);
-
 }
 
