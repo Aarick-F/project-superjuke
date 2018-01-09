@@ -1,3 +1,5 @@
+// THIS FILE IS OLD AND HAS SINCE BEEN SPLIT INTO MULTIPLE JS FILES, I'M KEEPING IT FOR POSTERITY
+
 paper.install(window);
 
 window.onload = function() {

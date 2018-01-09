@@ -1,30 +1,38 @@
-// THESE DOCS AREN'T BEING USED BECAUSE i HAVEN'T FIGURED OUT HOW TO REFERENCE TWO PAPERSCRIPT FILES IN THE SAME SCOPE YET
+paper.install(window);
 
-var player1 = new Player("dom");
-var player2 = new Player("sub");
+window.onload = function() {
 
-player1.path.smooth();
-player2.path.smooth();
+	paper.setup("myCanvas");
+    
+    // CREATE PLAYERS
+    var player1 = new Player("dom");
+    var player2 = new Player("sub");
+    player1.path.smooth();
+    player2.path.smooth();
 
-var naked = false;
+    // CENTERS PLAYERS
+    player1.path.translate(view.center);
+    player2.path.translate(view.center);
 
-function onFrame() {
+    var naked = false;
 
-	// CREATES PLAYERS AND LISTENS FOR KEY EVENTS
-	player1.playerMove();
-	player2.playerMove();
-
-
-    // SHOWS PATHS
-	tool.onMouseDown = function(event) {
+    // TOOL USED TO SHOW PATHS OF PLAYERS
+    var tool = new Tool();
+    tool.onMouseDown = function() {
         if(naked === false) {
         	naked = true;
         	player1.path.selected = true;
         	player2.path.selected = true;
-        } else {
+        } else if(naked === true) {
         	naked = false;
         	player1.path.selected = false;
         	player2.path.selected = false;
         }
-	}
+    }
+
+    view.onFrame = function() {
+	    // LISTENS FOR KEY EVENTS & UPDATES POSITION
+	    player1.playerMove();
+	    player2.playerMove();   
+    }
 }
