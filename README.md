@@ -1,8 +1,12 @@
 # project-superjuke
 Using Paper.js to build a game!
 
-If you're playtesting this, open the 'index.html' file to begin.
-If nothing happens, try opening it in firefox!
+If you're playtesting this, click here: https://aarick-f.github.io/project-superjuke/
+
+Right now there isn't anything to "play," but the hope is that this changes very soon!
+
+There is a known issue with the overlay texture in chrome, researching a fix.
+Works well in Firefox as of 1/9/18
 
 
 Project SuperJuke is an expansion on the game idea I had built in Scratch (https://scratch.mit.edu/projects/190007834/)
