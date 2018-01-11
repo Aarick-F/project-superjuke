@@ -4,8 +4,8 @@ function Player(type) {
 	if(type === "dom") {
 		// ATTRIBUTES
 		this.type = type;
-		this.radius = 80;
-		this.length = 80;
+		this.radius = 50;
+		this.length = 50;
 		this.speed = 2;
 		this.spawn = new Point(view.center);
 		this.numSegments = Math.floor(this.radius / 3 + 2);
@@ -14,7 +14,7 @@ function Player(type) {
 		// DRAWING THE SHAPE
         this.path = new Path({
         	strokeColor: "rgba(255, 255, 255, 1)",
-    		strokeWidth: 5,
+    		strokeWidth: 4,
     		shadowColor: "rgba(255, 0, 255, 1)",
     		shadowBlur: 25,
     		shadowOffset: new Point(0, 0),
@@ -24,8 +24,8 @@ function Player(type) {
 	} else if(type === "sub") {
         // ATTRIBUTES
 		this.type = type;
-		this.radius = 15;
-		this.length = 15;
+		this.radius = 10;
+		this.length = 10;
 		this.speed = 3;
 		this.spawn = new Point(view.center);
 		this.numSegments = Math.floor(this.radius / 3 + 2);

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P|VT323');
+
+body {
+	margin: 0;
+	padding: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	background: #222;
+	min-height: 100%;
+}
+
+header {
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	background: #222;
+    -webkit-box-shadow: 0 4px 12px -2px #0ff;
+            box-shadow: 0 4px 12px -2px #0ff;
+    -webkit-animation: cycle 18s linear infinite;
+	        animation: cycle 18s linear infinite;        
+}
+
+header h1 {
+	color: #fff;
+	font-family: "Press Start 2P", monospace;
+	letter-spacing: 2px;
+	margin: 30px;
+}
+
+canvas {
+	width: 100%;
+	-webkit-box-shadow: 0 4px 12px 0px #0ff;
+	        box-shadow: 0 4px 12px 0px #0ff;
+	-webkit-animation: cycle 18s linear infinite;
+	        animation: cycle 18s linear infinite;
+}
+
+footer {
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	background: #222;
+}
+
+footer h4 {
+	margin: 20px;
+	padding-right: 20px;
+	color: #fff;
+	font-family: 'VT323', monospace;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+a:visited: {
+	text-decoration: none;
+	color: #fff;
+}
+
+a:hover {
+	transition: 0.5s;
+	color: #f00;
+}
+
+.scanlines {
+    width: 100%;
+	margin: 0;
+	padding: 0;
+	background: -webkit-repeating-linear-gradient(
+	top,
+	transparent,
+	transparent 2px,
+	rgba(0, 0, 0, 0.3) 2px,
+	rgba(0, 0, 0, 0.3) 3px);
+	background: -o-repeating-linear-gradient(
+	top,
+	transparent,
+	transparent 2px,
+	rgba(0, 0, 0, 0.3) 2px,
+	rgba(0, 0, 0, 0.3) 3px);
+	background: repeating-linear-gradient(
+	top,
+	transparent,
+	transparent 2px,
+	rgba(0, 0, 0, 0.3) 2px,
+	rgba(0, 0, 0, 0.3) 3px);
+	background-size: 100%;
+	z-index: 1;
+}
+
+.gameView {
+	min-width: 900px;
+	min-height: 750px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.holder {
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+@-webkit-keyframes cycle {
+	50% {
+	-webkit-box-shadow: 0 4px 25px 0px #f0f;
+	        box-shadow: 0 4px 25px 0px #f0f;
+	}
+	100% {
+	-webkit-box-shadow: 0 4px 12px 0px #0ff;
+	        box-shadow: 0 4px 12px 0px #0ff;
+	}
+}
+
+@keyframes cycle {
+	50% {
+	-webkit-box-shadow: 0 4px 25px 0px #f0f;
+	        box-shadow: 0 4px 25px 0px #f0f;
+	}
+	100% {
+	-webkit-box-shadow: 0 4px 12px 0px #0ff;
+	        box-shadow: 0 4px 12px 0px #0ff;
+	}
+}
