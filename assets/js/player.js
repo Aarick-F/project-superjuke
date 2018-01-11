@@ -75,22 +75,22 @@ Player.prototype = {
 				} 
 			}
 		} else if(this.type === "sub") {
-			if(Key.isDown('up')) {
+			if(Key.isDown('i')) {
 				for(var i = 0; i < this.path.segments.length; i++) {
 					this.path.segments[i].point.y -= this.speed;
 				}
 			}
-			if(Key.isDown('down')) {
+			if(Key.isDown('k')) {
 				for(var i = 0; i < this.path.segments.length; i++) {
 					this.path.segments[i].point.y += this.speed;
 				}
 			}
-			if(Key.isDown('left')) {
+			if(Key.isDown('j')) {
 				for(var i = 0; i < this.path.segments.length; i++) {
 					this.path.segments[i].point.x -= this.speed;
 				}
 			}
-			if(Key.isDown('right')) {
+			if(Key.isDown('l')) {
 				for(var i = 0; i < this.path.segments.length; i++) {
 					this.path.segments[i].point.x += this.speed;
 				}
