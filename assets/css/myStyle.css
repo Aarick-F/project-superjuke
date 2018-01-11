@@ -26,8 +26,8 @@ header {
 	    -ms-flex-align: center;
 	        align-items: center;
 	background: #222;
-    -webkit-box-shadow: 0 4px 12px -2px #0ff;
-            box-shadow: 0 4px 12px -2px #0ff;
+    -webkit-box-shadow: 0 4px 12px 0px #0ff;
+            box-shadow: 0 4px 12px 0px #0ff;
     -webkit-animation: cycle 18s linear infinite;
 	        animation: cycle 18s linear infinite;        
 }
