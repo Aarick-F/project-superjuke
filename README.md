@@ -15,7 +15,7 @@ The goal is to launch a website that will host this competitive multiplayer game
 CONTROLS:
 In the current build, we're limited to 2-player local only while we build mechanics.
 Player 1: WASD
-Player 2: Arrow-Keys
+Player 2: IJKL
 
 
 Thank you for taking a look!
